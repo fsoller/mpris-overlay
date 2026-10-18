@@ -1,11 +1,11 @@
-package me.soller.honmpris.client;
+package me.soller.mprisdisplay.client;
 
-import me.soller.honmpris.HonMPRIS;
+import me.soller.mprisdisplay.MPRISDisplay;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 
-public class HonMPRISClient implements ClientModInitializer {
+public class MPRISDisplayClient implements ClientModInitializer {
 
 	private static final MPRISService mpris = new MPRISService();
 
@@ -14,17 +14,12 @@ public class HonMPRISClient implements ClientModInitializer {
 
 		Config.load();
 
+		mpris.start();
+
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
-				HonMPRIS.id("player"),
-				(context, tickCounter) -> {
-
-					Song song = mpris.getSong();
-
-					if (song != null) {
-						HudRenderer.render(context, song);
-					}
-				}
+				MPRISDisplay.id("player"),
+				(context, tickCounter) -> HudRenderer.render(context, mpris)
 		);
 	}
 }
