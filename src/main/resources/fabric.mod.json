@@ -1,40 +1,37 @@
 {
 	"schemaVersion": 1,
-	"id": "honmpris",
+	"id": "mprisdisplay",
 	"version": "${version}",
-	"name": "HonMPRIS",
-	"description": "a HON minecraft music hud mod",
+	"name": "MPRIS Display",
+	"description": "Shows the track playing in any MPRIS media player (via playerctl) as a small HUD in the game.",
 	"authors": [
 		"soller"
 	],
 	"contact": {
-		"sources": "https://github.com/honsoller/mpris-overlay"
+		"sources": "https://github.com/honsoller/mpris-overlay",
+		"issues": "https://github.com/honsoller/mpris-overlay/issues"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/honmpris/textures/boymoder.png",
-	"environment": "*",
+	"icon": "assets/mprisdisplay/textures/boymoder.png",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"me.soller.honmpris.HonMPRIS"
+			"me.soller.mprisdisplay.MPRISDisplay"
 		],
 		"client": [
-			"me.soller.honmpris.client.HonMPRISClient"
+			"me.soller.mprisdisplay.client.MPRISDisplayClient"
 		],
 		"modmenu": [
-			"me.soller.honmpris.client.HonMPRISModMenu"
+			"me.soller.mprisdisplay.client.MPRISDisplayModMenu"
 		]
 	},
-	"mixins": [
-		"honmpris.mixins.json",
-		{
-			"config": "honmpris.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
-		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.2",
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
 	}
 }

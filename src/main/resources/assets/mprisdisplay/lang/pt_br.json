@@ -1,0 +1,15 @@
+{
+  "mprisdisplay.config.title": "Configuração do MPRIS Display",
+  "mprisdisplay.config.render_overlay": "Mostrar overlay",
+  "mprisdisplay.config.show_paused": "Mostrar quando pausado",
+  "mprisdisplay.config.hide_idle": "Esconder sem música",
+  "mprisdisplay.config.scale": "Escala do HUD",
+  "mprisdisplay.config.pos_x": "Posição X",
+  "mprisdisplay.config.pos_y": "Posição Y",
+  "mprisdisplay.config.accent": "Cor de destaque",
+  "mprisdisplay.config.blacklist": "Blacklist",
+  "mprisdisplay.hud.idle": "nenhuma música tocando..",
+  "mprisdisplay.hud.by": "de %s",
+  "mprisdisplay.hud.no_playerctl": "playerctl não encontrado",
+  "mprisdisplay.hud.unsupported_os": "MPRIS só funciona no Linux"
+}
