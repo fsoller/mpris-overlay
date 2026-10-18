@@ -1,4 +1,4 @@
-# MPRIS Display
+# MPRIS Overlay
 
 A lightweight Minecraft Fabric mod that shows the track you are listening to
 in a small HUD: title, artist, album cover and playback progress.
@@ -21,7 +21,7 @@ media player (Spotify, VLC, mpv, browsers, ...). Highly based on Spotify Overlay
 
 ## Configuration
 
-Open the settings from Mod Menu, or edit `config/mprisdisplay.json`:
+Open the settings from Mod Menu, or edit `config/mprisoverlay.json`:
 
 | Option         | Default      | Description                                                        |
 | -------------- | ------------ | ------------------------------------------------------------------ |
@@ -40,7 +40,7 @@ Player names are the ones printed by `playerctl -l`.
 Clone the repository:
 
 ```bash
-git clone https://github.com/honsoller/mpris-overlay.git
+git clone https://github.com/fsoller/mpris-overlay.git
 cd mpris-overlay
 ```
 

@@ -1,4 +1,4 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
 import java.util.Locale;
 

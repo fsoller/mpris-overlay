@@ -1,6 +1,6 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -118,7 +118,7 @@ public class HudRenderer {
 
         if (!artist.isEmpty()) {
 
-            String line = Component.translatable("mprisdisplay.hud.by", artist).getString();
+            String line = Component.translatable("mprisoverlay.hud.by", artist).getString();
 
             context.text(
                     font,
@@ -209,7 +209,7 @@ public class HudRenderer {
         } catch (RuntimeException e) {
 
             failed = true;
-            MPRISDisplay.LOGGER.error("The overlay failed to render and was disabled until the game restarts", e);
+            MPRISOverlay.LOGGER.error("The overlay failed to render and was disabled until the game restarts", e);
         }
     }
 
@@ -288,9 +288,9 @@ public class HudRenderer {
     private static String idleMessage(MPRISService.Status status) {
 
         String key = switch (status) {
-            case PLAYERCTL_MISSING -> "mprisdisplay.hud.no_playerctl";
-            case UNSUPPORTED_OS -> "mprisdisplay.hud.unsupported_os";
-            case OK -> "mprisdisplay.hud.idle";
+            case PLAYERCTL_MISSING -> "mprisoverlay.hud.no_playerctl";
+            case UNSUPPORTED_OS -> "mprisoverlay.hud.unsupported_os";
+            case OK -> "mprisoverlay.hud.idle";
         };
 
         return Component.translatable(key).getString();

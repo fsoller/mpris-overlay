@@ -1,11 +1,11 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 
-public class MPRISDisplayClient implements ClientModInitializer {
+public class MPRISOverlayClient implements ClientModInitializer {
 
 	private static final MPRISService mpris = new MPRISService();
 
@@ -18,7 +18,7 @@ public class MPRISDisplayClient implements ClientModInitializer {
 
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
-				MPRISDisplay.id("player"),
+				MPRISOverlay.id("player"),
 				(context, tickCounter) -> HudRenderer.render(context, mpris)
 		);
 	}

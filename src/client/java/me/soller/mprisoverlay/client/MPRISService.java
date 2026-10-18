@@ -1,6 +1,6 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 
 import java.util.List;
 import java.util.Locale;
@@ -51,11 +51,11 @@ public final class MPRISService {
 
         if (!isSupportedOs()) {
             status = Status.UNSUPPORTED_OS;
-            MPRISDisplay.LOGGER.info("MPRIS is only available on Linux/BSD, the overlay will stay idle");
+            MPRISOverlay.LOGGER.info("MPRIS is only available on Linux/BSD, the overlay will stay idle");
             return;
         }
 
-        thread = new Thread(this::loop, "mprisdisplay-updater");
+        thread = new Thread(this::loop, "mprisoverlay-updater");
 
         // must be a daemon, otherwise the JVM cannot exit and the shutdown watchdog crashes the client
         thread.setDaemon(true);
@@ -93,7 +93,7 @@ public final class MPRISService {
                 String message = e.toString();
 
                 if (!message.equals(lastError)) {
-                    MPRISDisplay.LOGGER.warn("Failed to read player information", e);
+                    MPRISOverlay.LOGGER.warn("Failed to read player information", e);
                     lastError = message;
                 }
 
