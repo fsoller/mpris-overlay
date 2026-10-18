@@ -1,6 +1,6 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -43,7 +43,7 @@ final class Playerctl {
         } catch (IOException e) {
 
             if (!missing) {
-                MPRISDisplay.LOGGER.warn("Could not start '{}': {}", command[0], e.getMessage());
+                MPRISOverlay.LOGGER.warn("Could not start '{}': {}", command[0], e.getMessage());
             }
 
             missing = true;

@@ -1,4 +1,4 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MPRISDisplayModMenu implements ModMenuApi {
+public class MPRISOverlayModMenu implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
@@ -42,7 +42,7 @@ public class MPRISDisplayModMenu implements ModMenuApi {
 
         protected ConfigScreen(Screen parent) {
 
-            super(Component.translatable("mprisdisplay.config.title"));
+            super(Component.translatable("mprisoverlay.config.title"));
 
             this.parent = parent;
         }
@@ -73,15 +73,15 @@ public class MPRISDisplayModMenu implements ModMenuApi {
 
             int row = 0;
 
-            addToggle(left, right, row++, "mprisdisplay.config.render_overlay", () -> renderOverlay, value -> renderOverlay = value);
-            addToggle(left, right, row++, "mprisdisplay.config.show_paused", () -> showPaused, value -> showPaused = value);
-            addToggle(left, right, row++, "mprisdisplay.config.hide_idle", () -> hideWhenIdle, value -> hideWhenIdle = value);
+            addToggle(left, right, row++, "mprisoverlay.config.render_overlay", () -> renderOverlay, value -> renderOverlay = value);
+            addToggle(left, right, row++, "mprisoverlay.config.show_paused", () -> showPaused, value -> showPaused = value);
+            addToggle(left, right, row++, "mprisoverlay.config.hide_idle", () -> hideWhenIdle, value -> hideWhenIdle = value);
 
-            scaleBox = addField(left, right, row++, "mprisdisplay.config.scale", String.valueOf(cfg.hudScale), 8);
-            xBox = addField(left, right, row++, "mprisdisplay.config.pos_x", String.valueOf(cfg.hudX), 8);
-            yBox = addField(left, right, row++, "mprisdisplay.config.pos_y", String.valueOf(cfg.hudY), 8);
-            colorBox = addField(left, right, row++, "mprisdisplay.config.accent", formatColor(cfg.accentColor), 9);
-            blacklistBox = addField(left, right, row++, "mprisdisplay.config.blacklist", String.join(", ", cfg.blacklist), 256);
+            scaleBox = addField(left, right, row++, "mprisoverlay.config.scale", String.valueOf(cfg.hudScale), 8);
+            xBox = addField(left, right, row++, "mprisoverlay.config.pos_x", String.valueOf(cfg.hudX), 8);
+            yBox = addField(left, right, row++, "mprisoverlay.config.pos_y", String.valueOf(cfg.hudY), 8);
+            colorBox = addField(left, right, row++, "mprisoverlay.config.accent", formatColor(cfg.accentColor), 9);
+            blacklistBox = addField(left, right, row++, "mprisoverlay.config.blacklist", String.join(", ", cfg.blacklist), 256);
 
             int doneY = Math.max(FIRST_ROW_Y + row * ROW_HEIGHT + 8, this.height - 28);
 

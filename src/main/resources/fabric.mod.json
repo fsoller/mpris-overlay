@@ -1,28 +1,28 @@
 {
 	"schemaVersion": 1,
-	"id": "mprisdisplay",
+	"id": "mprisoverlay",
 	"version": "${version}",
-	"name": "MPRIS Display",
+	"name": "MPRIS Overlay",
 	"description": "Shows the track playing in any MPRIS media player (via playerctl) as a small HUD in the game.",
 	"authors": [
 		"soller"
 	],
 	"contact": {
-		"sources": "https://github.com/honsoller/mpris-overlay",
-		"issues": "https://github.com/honsoller/mpris-overlay/issues"
+		"sources": "https://github.com/fsoller/mpris-overlay",
+		"issues": "https://github.com/fsoller/mpris-overlay/issues"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/mprisdisplay/textures/boymoder.png",
+	"icon": "assets/mprisoverlay/textures/boymoder.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"me.soller.mprisdisplay.MPRISDisplay"
+			"me.soller.mprisoverlay.MPRISOverlay"
 		],
 		"client": [
-			"me.soller.mprisdisplay.client.MPRISDisplayClient"
+			"me.soller.mprisoverlay.client.MPRISOverlayClient"
 		],
 		"modmenu": [
-			"me.soller.mprisdisplay.client.MPRISDisplayModMenu"
+			"me.soller.mprisoverlay.client.MPRISOverlayModMenu"
 		]
 	},
 	"depends": {

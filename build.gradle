@@ -3,7 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
-// e.g. mprisdisplay-1.2.0-alpha+26.3.jar
+// e.g. mprisoverlay-1.2.0-alpha+26.3.jar
 version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group
 
@@ -18,7 +18,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"mprisdisplay" {
+		"mprisoverlay" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

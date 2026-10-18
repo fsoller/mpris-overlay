@@ -1,0 +1,15 @@
+{
+  "mprisoverlay.config.title": "MPRIS Overlay Config",
+  "mprisoverlay.config.render_overlay": "Render Overlay",
+  "mprisoverlay.config.show_paused": "Show When Paused",
+  "mprisoverlay.config.hide_idle": "Hide When Idle",
+  "mprisoverlay.config.scale": "Hud Scale",
+  "mprisoverlay.config.pos_x": "Pos X",
+  "mprisoverlay.config.pos_y": "Pos Y",
+  "mprisoverlay.config.accent": "Accent Color",
+  "mprisoverlay.config.blacklist": "Blacklist",
+  "mprisoverlay.hud.idle": "nothing playing..",
+  "mprisoverlay.hud.by": "by %s",
+  "mprisoverlay.hud.no_playerctl": "playerctl not found",
+  "mprisoverlay.hud.unsupported_os": "MPRIS needs Linux"
+}

@@ -1,4 +1,4 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
 import net.minecraft.client.gui.Font;
 

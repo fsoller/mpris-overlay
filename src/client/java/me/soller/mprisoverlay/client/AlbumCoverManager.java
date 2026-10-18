@@ -1,7 +1,7 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
 import com.mojang.blaze3d.platform.NativeImage;
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.TextureManager;
@@ -45,7 +45,7 @@ public class AlbumCoverManager {
     private static final int MAX_DOWNLOAD_BYTES = 10 * 1024 * 1024;
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor(runnable -> {
-        Thread thread = new Thread(runnable, "mprisdisplay-cover-loader");
+        Thread thread = new Thread(runnable, "mprisoverlay-cover-loader");
         thread.setDaemon(true);
         return thread;
     });
@@ -115,7 +115,7 @@ public class AlbumCoverManager {
 
             if (decoded == null) {
                 // unsupported format (webp for example)
-                MPRISDisplay.LOGGER.debug("Unsupported cover image: {}", key);
+                MPRISOverlay.LOGGER.debug("Unsupported cover image: {}", key);
                 return;
             }
 
@@ -131,7 +131,7 @@ public class AlbumCoverManager {
 
         } catch (Exception e) {
 
-            MPRISDisplay.LOGGER.debug("Could not load cover {}", key, e);
+            MPRISOverlay.LOGGER.debug("Could not load cover {}", key, e);
             return;
         }
 
@@ -153,7 +153,7 @@ public class AlbumCoverManager {
 
         if (key.startsWith(BUILTIN_PREFIX)) {
 
-            String path = "/assets/" + MPRISDisplay.MOD_ID + "/" + key.substring(BUILTIN_PREFIX.length());
+            String path = "/assets/" + MPRISOverlay.MOD_ID + "/" + key.substring(BUILTIN_PREFIX.length());
 
             try (InputStream in = AlbumCoverManager.class.getResourceAsStream(path)) {
                 return in == null ? null : in.readAllBytes();
@@ -240,9 +240,9 @@ public class AlbumCoverManager {
         // texture that may still be referenced by the frame being built
         int number = ++textureCounter;
 
-        Identifier id = MPRISDisplay.id("cover/" + number);
+        Identifier id = MPRISOverlay.id("cover/" + number);
 
-        textures.register(id, new DynamicTexture(() -> "mprisdisplay_cover_" + number, image));
+        textures.register(id, new DynamicTexture(() -> "mprisoverlay_cover_" + number, image));
 
         Identifier previous = currentTexture;
         currentTexture = id;

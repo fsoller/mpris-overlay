@@ -1,4 +1,4 @@
-package me.soller.mprisdisplay.client;
+package me.soller.mprisoverlay.client;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -6,7 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
-import me.soller.mprisdisplay.MPRISDisplay;
+import me.soller.mprisoverlay.MPRISOverlay;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;
@@ -55,25 +55,36 @@ public class Config {
 
 
     private static Path file() {
-        return FabricLoader.getInstance().getConfigDir().resolve("mprisdisplay.json");
+        return FabricLoader.getInstance().getConfigDir().resolve("mprisoverlay.json");
     }
 
-    // the mod used to be called HonMPRIS, keep the settings of people who already had it
+    // earlier names of this mod, keep the settings of people who already had them
+    private static final String[] OLD_FILE_NAMES = {"honmpris.json", "mprisdisplay.json"};
+
     private static void migrateOldFile(Path file) {
 
-        Path old = file.resolveSibling("honmpris.json");
-
-        if (Files.exists(file) || !Files.exists(old)) {
+        if (Files.exists(file)) {
             return;
         }
 
-        try {
+        for (String name : OLD_FILE_NAMES) {
 
-            Files.move(old, file);
+            Path old = file.resolveSibling(name);
 
-        } catch (IOException e) {
+            if (!Files.exists(old)) {
+                continue;
+            }
 
-            MPRISDisplay.LOGGER.warn("Could not move {} to {}", old, file, e);
+            try {
+
+                Files.move(old, file);
+
+            } catch (IOException e) {
+
+                MPRISOverlay.LOGGER.warn("Could not move {} to {}", old, file, e);
+            }
+
+            return;
         }
     }
 
@@ -104,7 +115,7 @@ public class Config {
 
             } catch (IOException | JsonParseException e) {
 
-                MPRISDisplay.LOGGER.warn("Could not read {}, using defaults", file, e);
+                MPRISOverlay.LOGGER.warn("Could not read {}, using defaults", file, e);
 
                 backupBrokenFile(file);
             }
@@ -139,7 +150,7 @@ public class Config {
 
             Files.move(
                     file,
-                    file.resolveSibling("mprisdisplay.json.broken"),
+                    file.resolveSibling("mprisoverlay.json.broken"),
                     StandardCopyOption.REPLACE_EXISTING
             );
 
@@ -157,7 +168,7 @@ public class Config {
         }
 
         Path file = file();
-        Path temp = file.resolveSibling("mprisdisplay.json.tmp");
+        Path temp = file.resolveSibling("mprisoverlay.json.tmp");
 
         try {
 
@@ -178,7 +189,7 @@ public class Config {
 
         } catch (IOException e) {
 
-            MPRISDisplay.LOGGER.warn("Could not save {}", file, e);
+            MPRISOverlay.LOGGER.warn("Could not save {}", file, e);
         }
     }
 
