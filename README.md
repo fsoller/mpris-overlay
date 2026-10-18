@@ -10,7 +10,6 @@ media player (Spotify, VLC, mpv, browsers, ...). Highly based on Spotify Overlay
 - Minecraft 26.3 with [Fabric Loader](https://fabricmc.net/) 0.19.5+ and Fabric API
 - Java 25
 - Linux (or BSD) with [`playerctl`](https://github.com/altdesktop/playerctl) installed and in your `PATH`
-- [Mod Menu](https://modrinth.com/mod/modmenu) is optional, it adds a settings screen
 
 ## Features
 
