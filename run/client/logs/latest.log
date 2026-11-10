@@ -1,0 +1,28 @@
+[01:23:25] [RFB-Main/INFO]: Setting user: Developer
+[01:23:26] [Client thread/INFO]: LWJGL Version: 3.4.2+13
+[01:23:27] [Client thread/ERROR]: Couldn't initialize twitch stream
+[01:23:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MPRIS Overlay, FMLFileResourcePack:Hodgepodge, FMLFileResourcePack:lwjgl3ify, FMLFileResourcePack:GTNH Lib, FMLFileResourcePack:UniMixins, FMLFileResourcePack:UniMixins: Mixin (UniMix), FMLFileResourcePack:UniMixins: Compatibility, FMLFileResourcePack:UniMixins: Mixingasm, FMLFileResourcePack:UniMixins: SpongeMixins, FMLFileResourcePack:UniMixins: MixinBooterLegacy, FMLFileResourcePack:UniMixins: GTNHMixins, FMLFileResourcePack:UniMixins: MixinExtras, FMLFileResourcePack:GTNHExtLib
+[01:23:32] [Client thread/INFO]: Created: 32x32 textures/blocks-atlas
+[01:23:32] [Client thread/INFO]: Created: 32x32 textures/items-atlas
+[01:23:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MPRIS Overlay, FMLFileResourcePack:Hodgepodge, FMLFileResourcePack:lwjgl3ify, FMLFileResourcePack:GTNH Lib, FMLFileResourcePack:UniMixins, FMLFileResourcePack:UniMixins: Mixin (UniMix), FMLFileResourcePack:UniMixins: Compatibility, FMLFileResourcePack:UniMixins: Mixingasm, FMLFileResourcePack:UniMixins: SpongeMixins, FMLFileResourcePack:UniMixins: MixinBooterLegacy, FMLFileResourcePack:UniMixins: GTNHMixins, FMLFileResourcePack:UniMixins: MixinExtras, FMLFileResourcePack:GTNHExtLib
+[01:23:32] [Sound Library Loader/INFO]: Sound engine started
+[01:23:32] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[01:23:32] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[01:23:33] [Sound Library Loader/INFO]: Sound engine started
+[01:24:10] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[01:24:10] [Server thread/INFO]: Generating keypair
+[01:24:10] [Server thread/INFO]: Preparing start region for level 0
+[01:24:11] [Server thread/INFO]: Changing view distance to 12, from 10
+[01:24:11] [Server thread/INFO]: Developer[local:E:f9a0e8f5] logged in with entity id 451 at (-240.60348249225828, 77.0, 253.07955303094656)
+[01:24:11] [Server thread/INFO]: Developer joined the game
+[01:24:16] [Server thread/INFO]: Saving and pausing game...
+[01:24:16] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[01:24:16] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[01:24:16] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[01:24:25] [Server thread/INFO]: Stopping server
+[01:24:25] [Server thread/INFO]: Saving players
+[01:24:25] [Server thread/INFO]: Saving worlds
+[01:24:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[01:24:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[01:24:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[01:24:26] [Client thread/INFO]: Stopping!

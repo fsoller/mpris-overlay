@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="14.1.0">
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/Config.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/MPRISOverlay.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/GuiFactory.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/TextFit.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/Song.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/HudRenderer.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/CoverManager.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/ConfigEventHandler.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/Playerctl.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/ConfigGui.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/client/MPRISService.java">
+</file>
+<file name="/home/soller/Projects/minecraft/mpris-overlay-1.7.10/src/main/java/me/soller/mprisoverlay/ClientInit.java">
+</file>
+</checkstyle>

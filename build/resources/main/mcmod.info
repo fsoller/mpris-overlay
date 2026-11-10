@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "mprisoverlay",
+    "name": "MPRIS Overlay",
+    "description": "Shows the track playing in any MPRIS media player (via playerctl) as a small HUD in the game.",
+    "version": "1.2.0-alpha",
+    "mcversion": "1.7.10",
+    "url": "https://github.com/fsoller/mpris-overlay",
+    "authorList": ["soller"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
